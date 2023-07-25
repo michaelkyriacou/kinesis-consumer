@@ -8,7 +8,7 @@ Major changes:
 
 * Remove the concept of `ScanStatus` to simplify the scanning interface
 
-For more context on this change see: https://github.com/harlow/kinesis-consumer/issues/75
+For more context on this change see: https://github.com/michaelkyriacou/kinesis-consumer/issues/75
 
 ## v0.3.0 - 2018-12-28
 
@@ -25,13 +25,13 @@ Minor changes:
 
 This is the last stable release from which there is a separate Client. It has caused confusion and will be removed going forward.
 
-https://github.com/harlow/kinesis-consumer/releases/tag/v0.2.0
+https://github.com/michaelkyriacou/kinesis-consumer/releases/tag/v0.2.0
 
 ## v0.1.0 - 2017-11-20
 
 This is the last stable release of the consumer which aggregated records in `batch` before calling the callback func.
 
-https://github.com/harlow/kinesis-consumer/releases/tag/v0.1.0
+https://github.com/michaelkyriacou/kinesis-consumer/releases/tag/v0.1.0
 
-[unreleased]: https://github.com/harlow/kinesis-consumer/compare/v0.2.0...HEAD
+[unreleased]: https://github.com/michaelkyriacou/kinesis-consumer/compare/v0.2.0...HEAD
 [options]: https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis

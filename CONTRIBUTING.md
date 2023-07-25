@@ -9,5 +9,5 @@ To contribute:
 3. Squash commits and add an [excellent commit message][2].
 4. Send a pull request.
 
-[1]: https://github.com/harlow/kinesis-connectors/tree/master
+[1]: https://github.com/michaelkyriacou/kinesis-connectors/tree/master
 [2]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html

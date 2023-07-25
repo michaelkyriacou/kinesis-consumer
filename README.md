@@ -1,6 +1,6 @@
 # Golang Kinesis Consumer
 
-![technology Go](https://img.shields.io/badge/technology-go-blue.svg) [![Build Status](https://travis-ci.com/harlow/kinesis-consumer.svg?branch=master)](https://travis-ci.com/harlow/kinesis-consumer) [![GoDoc](https://godoc.org/github.com/harlow/kinesis-consumer?status.svg)](https://godoc.org/github.com/harlow/kinesis-consumer) [![GoReportCard](https://goreportcard.com/badge/github.com/harlow/kinesis-consumer)](https://goreportcard.com/report/harlow/kinesis-consumer)
+![technology Go](https://img.shields.io/badge/technology-go-blue.svg) [![Build Status](https://travis-ci.com/harlow/kinesis-consumer.svg?branch=master)](https://travis-ci.com/harlow/kinesis-consumer) [![GoDoc](https://godoc.org/github.com/michaelkyriacou/kinesis-consumer?status.svg)](https://godoc.org/github.com/michaelkyriacou/kinesis-consumer) [![GoReportCard](https://goreportcard.com/badge/github.com/michaelkyriacou/kinesis-consumer)](https://goreportcard.com/report/harlow/kinesis-consumer)
 
 Kinesis consumer applications written in Go. This library is intended to be a lightweight wrapper around the Kinesis API to read records, save checkpoints (with swappable backends), and gracefully recover from service timeouts/errors.
 
@@ -14,10 +14,10 @@ __Alternate serverless options:__
 
 Get the package source:
 
-    $ go get github.com/harlow/kinesis-consumer
+    $ go get github.com/michaelkyriacou/kinesis-consumer
 
 Note: This repo now requires the AWS SDK V2 package. If you are still using
-AWS SDK V1 then use: https://github.com/harlow/kinesis-consumer/releases/tag/v0.3.5
+AWS SDK V1 then use: https://github.com/michaelkyriacou/kinesis-consumer/releases/tag/v0.3.5
 
 ## Overview
 
@@ -31,7 +31,7 @@ _Important 2: The default Log, Counter, and Checkpoint are no-op which means no 
 import(
 	// ...
 
-	consumer "github.com/harlow/kinesis-consumer"
+	consumer "github.com/michaelkyriacou/kinesis-consumer"
 )
 
 func main() {
@@ -135,7 +135,7 @@ To persist scan progress choose one of the following storage layers:
 The Redis checkpoint requries App Name, and Stream Name:
 
 ```go
-import store "github.com/harlow/kinesis-consumer/store/redis"
+import store "github.com/michaelkyriacou/kinesis-consumer/store/redis"
 
 // redis checkpoint
 db, err := store.New(appName)
@@ -149,7 +149,7 @@ if err != nil {
 The DynamoDB checkpoint requires Table Name, App Name, and Stream Name:
 
 ```go
-import store "github.com/harlow/kinesis-consumer/store/ddb"
+import store "github.com/michaelkyriacou/kinesis-consumer/store/ddb"
 
 // ddb checkpoint
 db, err := store.New(appName, tableName)
@@ -190,7 +190,7 @@ Sort key: shard_id
 The Postgres checkpoint requires Table Name, App Name, Stream Name and ConnectionString:
 
 ```go
-import store "github.com/harlow/kinesis-consumer/store/postgres"
+import store "github.com/michaelkyriacou/kinesis-consumer/store/postgres"
 
 // postgres checkpoint
 db, err := store.New(app, table, connStr)
@@ -218,7 +218,7 @@ The table name has to be the same that you specify when creating the checkpoint.
 The Mysql checkpoint requires Table Name, App Name, Stream Name and ConnectionString (just like the Postgres checkpoint!):
 
 ```go
-import store "github.com/harlow/kinesis-consumer/store/mysql"
+import store "github.com/michaelkyriacou/kinesis-consumer/store/mysql"
 
 // mysql checkpoint
 db, err := store.New(app, table, connStr)
@@ -369,8 +369,8 @@ Please see [CONTRIBUTING.md] for more information. Thank you, [contributors]!
 Copyright (c) 2015 Harlow Ward. It is free software, and may
 be redistributed under the terms specified in the [LICENSE] file.
 
-[contributors]: https://github.com/harlow/kinesis-connectors/graphs/contributors
+[contributors]: https://github.com/michaelkyriacou/kinesis-connectors/graphs/contributors
 
 > [www.hward.com](http://www.hward.com) &nbsp;&middot;&nbsp;
-> GitHub [@harlow](https://github.com/harlow) &nbsp;&middot;&nbsp;
+> GitHub [@harlow](https://github.com/michaelkyriacou) &nbsp;&middot;&nbsp;
 > Twitter [@harlow_ward](https://twitter.com/harlow_ward)

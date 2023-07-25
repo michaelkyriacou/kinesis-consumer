@@ -13,8 +13,8 @@ import (
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/credentials"
 	"github.com/aws/aws-sdk-go-v2/service/kinesis"
-	consumer "github.com/harlow/kinesis-consumer"
-	store "github.com/harlow/kinesis-consumer/store/mysql"
+	consumer "github.com/michaelkyriacou/kinesis-consumer"
+	store "github.com/michaelkyriacou/kinesis-consumer/store/mysql"
 )
 
 func main() {
